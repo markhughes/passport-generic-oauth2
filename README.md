@@ -28,12 +28,8 @@ list so other people can find it.
 
 ---
 
-<!--
-[![npm](https://img.shields.io/npm/v/passport-oauth2.svg)](https://www.npmjs.com/package/passport-generic-oauth2)
-[![build](https://img.shields.io/travis/jaredhanson/passport-oauth2.svg)](https://travis-ci.org/jaredhanson/passport-oauth2)
-[![coverage](https://img.shields.io/coveralls/jaredhanson/passport-oauth2.svg)](https://coveralls.io/github/jaredhanson/passport-oauth2)
-[...](https://github.com/jaredhanson/passport-oauth2/wiki/Status)
--->
+[![npm](https://img.shields.io/npm/v/passport-generic-oauth2.svg)](https://www.npmjs.com/package/passport-generic-oauth2)
+[![build](https://img.shields.io/github/actions/workflow/status/markhughes/passport-generic-oauth2/ci.yml)](https://github.com/markhughes/passport-generic-oauth2/actions)
 
 ## Install
 
@@ -43,7 +39,7 @@ Note that `oauth` is a peer dependency and you may want to add the correct versi
 
 or 
 
-    $ yarn install passport-generic-oauth2 oauth
+    $ yarn add passport-generic-oauth2 oauth
 
 ## Usage
 
