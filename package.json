@@ -1,7 +1,7 @@
 {
-  "name": "passport-oauth2",
-  "version": "1.6.1",
-  "description": "OAuth 2.0 authentication strategy for Passport.",
+  "name": "passport-generic-oauth2",
+  "version": "2.0.0",
+  "description": "Maintained OAuth 2.0 authentication strategy for Passport.",
   "keywords": [
     "passport",
     "auth",
@@ -12,21 +12,28 @@
     "oauth",
     "oauth2"
   ],
-  "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
-  },
+  "authors": [
+    {
+      "name": "Mark Hughes",
+      "email": "m@rkhugh.es",
+      "url": "https://markhughes.dev"
+    },
+    {
+      "name": "Jared Hanson",
+      "email": "jaredhanson@gmail.com",
+      "url": "http://www.jaredhanson.net/"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-oauth2.git"
+    "url": "git://github.com/markhughes/passport-generic-oauth2.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-oauth2/issues"
+    "url": "http://github.com/markhughes/passport-generic-oauth2/issues"
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/jaredhanson"
+    "url": "https://github.com/sponsors/markhughes"
   },
   "license": "MIT",
   "licenses": [
@@ -38,22 +45,31 @@
   "main": "./lib",
   "dependencies": {
     "base64url": "3.x.x",
-    "oauth": "0.9.x",
     "passport-strategy": "1.x.x",
-    "uid2": "0.0.x",
+    "uid2": "1.x.x",
     "utils-merge": "1.x.x"
   },
   "devDependencies": {
-    "make-node": "0.4.6",
-    "mocha": "2.x.x",
     "chai": "2.x.x",
-    "proxyquire": "0.6.x",
-    "chai-passport-strategy": "1.x.x"
+    "chai-passport-strategy": "1.x.x",
+    "coveralls": "^3.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "10.x.x",
+    "nyc": "^15.1.0",
+    "oauth": "0.10.x",
+    "proxyquire": "0.6.x"
+  },
+  "peerDependencies": {
+    "oauth": ">= 0.9 <= 0.10"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 16"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js"
+    "test": "mocha --reporter spec --require test/bootstrap/node test/*.test.js test/**/*.test.js",
+    "test:coverage": "nyc --reporter=text mocha --require test/bootstrap/node"
+  },
+  "volta": {
+    "node": "18.13.0"
   }
 }

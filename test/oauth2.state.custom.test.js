@@ -50,7 +50,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         store: new CustomStore()
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       describe('that redirects to service provider', function() {
@@ -134,7 +134,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         store: new CustomStore()
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -269,7 +269,7 @@ describe('OAuth2Strategy', function() {
           callbackURL: 'https://www.example.net/auth/example/callback',
           store: new CustomStore()
         },
-        function(accessToken, refreshToken, profile, done) {
+        function({ accessToken, refreshToken, profile }, done) {
           if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
           if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
           if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -334,7 +334,7 @@ describe('OAuth2Strategy', function() {
           callbackURL: 'https://www.example.net/auth/example/callback',
           store: new CustomStore()
         },
-        function(accessToken, refreshToken, profile, done) {
+        function({ accessToken, refreshToken, profile }, done) {
           if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
           if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
           if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }

@@ -103,7 +103,7 @@ describe('OAuth2Strategy', function() {
         clientID: 'ABC123',
         clientSecret: 'secret'
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -132,7 +132,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -162,7 +162,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         scope: 'email'
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -191,7 +191,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -220,7 +220,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -250,7 +250,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         scopeSeparator: ','
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -279,7 +279,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -308,7 +308,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -337,7 +337,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -369,7 +369,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -398,7 +398,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -427,7 +427,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var url;
@@ -460,7 +460,7 @@ describe('OAuth2Strategy', function() {
         clientID: 'ABC123',
         clientSecret: 'secret'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -514,7 +514,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -568,7 +568,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -622,7 +622,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -679,7 +679,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (params.example_parameter !== 'example_value') { return done(new Error('incorrect params argument')); }
@@ -735,7 +735,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         passReqToCallback: true
       },
-      function(req, accessToken, refreshToken, profile, done) {
+      function({ req, accessToken, refreshToken, profile}, done) {
         if (req.method != 'GET') { return done(new Error('incorrect req argument')); }
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
@@ -791,7 +791,7 @@ describe('OAuth2Strategy', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         passReqToCallback: true
       },
-      function(req, accessToken, refreshToken, params, profile, done) {
+      function({ req, accessToken, refreshToken, params, profile }, done) {
         if (req.method != 'GET') { return done(new Error('incorrect req argument')); }
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
@@ -847,7 +847,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({}, done) {
         return done(null, false);
       });
       
@@ -888,7 +888,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({}, done) {
         return done(null, false, { message: 'Invite required' });
       });
       
@@ -930,7 +930,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var user
@@ -963,7 +963,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var user
@@ -997,7 +997,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var err;
@@ -1032,7 +1032,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var err;
@@ -1068,7 +1068,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
       
       
       var err;
@@ -1105,7 +1105,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         return done(new Error('verify callback should not be called'));
       });
   
@@ -1144,7 +1144,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         return done(new Error('verify callback should not be called'));
       });
   
@@ -1184,7 +1184,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         return done(new Error('verify callback should not be called'));
       });
   
@@ -1224,7 +1224,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         return done(new Error('verify callback should not be called'));
       });
   
@@ -1264,7 +1264,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         return done(new Error('something went wrong'));
       });
   
@@ -1303,7 +1303,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({}, done) {
         return done(new Error('something went wrong'));
       });
   
@@ -1341,7 +1341,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, params, profile, done) {
+      function({ accessToken, refreshToken, params, profile }, done) {
         throw new Error('something was thrown');
       });
   
@@ -1384,7 +1384,7 @@ describe('OAuth2Strategy', function() {
         clientSecret: 'secret',
         callbackURL: '/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {});
+      function({ accessToken, refreshToken, profile }, done) {});
   
       describe('that redirects to service provider from secure connection', function() {
         var url;
@@ -1560,7 +1560,7 @@ describe('OAuth2Strategy', function() {
             callbackURL: '/auth/example/callback',
             proxy: true
           },
-          function(accessToken, refreshToken, profile, done) {});
+          function({ accessToken, refreshToken, profile }, done) {});
           
           
           var url;
@@ -1594,7 +1594,7 @@ describe('OAuth2Strategy', function() {
             callbackURL: '/auth/example/callback',
             proxy: true
           },
-          function(accessToken, refreshToken, profile, done) {});
+          function({ accessToken, refreshToken, profile }, done) {});
           
           
           var url;
@@ -1635,7 +1635,7 @@ describe('OAuth2Strategy', function() {
           clientSecret: 'secret',
           callbackURL: '/auth/example/callback',
         },
-        function(accessToken, refreshToken, profile, done) {
+        function({accessToken, refreshToken, profile}, done) {
           if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
           if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
           if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }
@@ -1692,7 +1692,7 @@ describe('OAuth2Strategy', function() {
           clientSecret: 'secret',
           callbackURL: '/auth/example/callback',
         },
-        function(accessToken, refreshToken, profile, done) {
+        function({accessToken, refreshToken, profile}, done) {
           if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
           if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
           if (typeof profile !== 'object') { return done(new Error('incorrect profile argument')); }

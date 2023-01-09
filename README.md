@@ -1,4 +1,4 @@
-# passport-oauth2
+# passport-generic-oauth2
 
 General-purpose OAuth 2.0 authentication strategy for [Passport](https://www.passportjs.org/).
 
@@ -28,22 +28,22 @@ list so other people can find it.
 
 ---
 
-<p align="center">
-  <sup>Advertisement</sup>
-  <br>
-  <a href="https://click.linksynergy.com/link?id=D*o7yui4/NM&offerid=507388.380582&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-oauth-2%2F&u1=5I2riUEiNIRjPjdjxj6X4exzu3lhRkWY0et6Y8eyT3">Learn OAuth 2.0 - Get started as an API Security Expert</a><br>Just imagine what could happen to YOUR professional career if you had skills in OAuth > 8500 satisfied students
-</p>
-
----
-
-[![npm](https://img.shields.io/npm/v/passport-oauth2.svg)](https://www.npmjs.com/package/passport-oauth2)
+<!--
+[![npm](https://img.shields.io/npm/v/passport-oauth2.svg)](https://www.npmjs.com/package/passport-generic-oauth2)
 [![build](https://img.shields.io/travis/jaredhanson/passport-oauth2.svg)](https://travis-ci.org/jaredhanson/passport-oauth2)
 [![coverage](https://img.shields.io/coveralls/jaredhanson/passport-oauth2.svg)](https://coveralls.io/github/jaredhanson/passport-oauth2)
 [...](https://github.com/jaredhanson/passport-oauth2/wiki/Status)
+-->
 
 ## Install
 
-    $ npm install passport-oauth2
+Note that `oauth` is a peer dependency and you may want to add the correct version you're after.
+
+    $ npm install passport-generic-oauth2 oauth
+
+or 
+
+    $ yarn install passport-generic-oauth2 oauth
 
 ## Usage
 
@@ -63,7 +63,7 @@ passport.use(new OAuth2Strategy({
     clientSecret: EXAMPLE_CLIENT_SECRET,
     callbackURL: "http://localhost:3000/auth/example/callback"
   },
-  function(accessToken, refreshToken, profile, cb) {
+  function({ accessToken, refreshToken, profile }, cb) {
     User.findOrCreate({ exampleId: profile.id }, function (err, user) {
       return cb(err, user);
     });
@@ -94,6 +94,7 @@ app.get('/auth/example/callback',
 ## Related Modules
 
 - [passport-oauth1](https://github.com/jaredhanson/passport-oauth1) — OAuth 1.0 authentication strategy
+- [passport-oauth2](https://github.com/jaredhanson/passport-oauth2) — previous unmaintained version
 - [passport-http-bearer](https://github.com/jaredhanson/passport-http-bearer) — Bearer token authentication strategy for APIs
 - [OAuth2orize](https://github.com/jaredhanson/oauth2orize) — OAuth 2.0 authorization server toolkit
 
@@ -106,7 +107,7 @@ expected to have corresponding test cases.  Ensure that the complete test suite
 passes by executing:
 
 ```bash
-$ make test
+$ yarn test
 ```
 
 #### Coverage
@@ -116,14 +117,14 @@ increse test coverage are happily accepted.  Coverage reports can be viewed by
 executing:
 
 ```bash
-$ make test-cov
-$ make view-cov
+$ yarn test:coverage
 ```
 
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
+Copyright (c) 2022-2023 Mark Hughes <[https://markhughes.dev/](https://markhughes.dev/)>
 Copyright (c) 2011-2016 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
 
 

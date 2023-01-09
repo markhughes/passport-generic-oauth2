@@ -1,5 +1,7 @@
 docs/
 reports/
+coverage/ 
+.nyc_output
 
 # Mac OS X
 .DS_Store
@@ -7,3 +9,4 @@ reports/
 # Node.js
 node_modules
 npm-debug.log
+yarn-error.log

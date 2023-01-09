@@ -26,7 +26,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         
@@ -96,7 +96,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         
@@ -168,7 +168,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -211,7 +211,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }

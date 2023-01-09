@@ -28,7 +28,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile.username != 'jaredhanson') { return done(new Error('incorrect profile argument')); }
@@ -82,7 +82,7 @@ describe('OAuth2Strategy subclass', function() {
         clientSecret: 'secret',
         callbackURL: 'https://www.example.net/auth/example/callback',
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         return done(new Error('verify callback should not be called'));
       });
       
@@ -125,7 +125,7 @@ describe('OAuth2Strategy subclass', function() {
         callbackURL: 'https://www.example.net/auth/example/callback',
         skipUserProfile: true
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile !== undefined) { return done(new Error('incorrect profile argument')); }
@@ -181,7 +181,7 @@ describe('OAuth2Strategy subclass', function() {
           return false;
         }
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile.username != 'jaredhanson') { return done(new Error('incorrect profile argument')); }
@@ -238,7 +238,7 @@ describe('OAuth2Strategy subclass', function() {
           return true;
         }
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile !== undefined) { return done(new Error('incorrect profile argument')); }
@@ -296,7 +296,7 @@ describe('OAuth2Strategy subclass', function() {
           return done(null, false);
         }
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile.username != 'jaredhanson') { return done(new Error('incorrect profile argument')); }
@@ -355,7 +355,7 @@ describe('OAuth2Strategy subclass', function() {
           return done(null, true);
         }
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile !== undefined) { return done(new Error('incorrect profile argument')); }
@@ -411,7 +411,7 @@ describe('OAuth2Strategy subclass', function() {
           return done(new Error('something went wrong'));
         }
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken !== '2YotnFZFEjr1zCsicMWpAA') { return done(new Error('incorrect accessToken argument')); }
         if (refreshToken !== 'tGzv3JOkF0XG5Qx2TlKWIA') { return done(new Error('incorrect refreshToken argument')); }
         if (profile !== undefined) { return done(new Error('incorrect profile argument')); }

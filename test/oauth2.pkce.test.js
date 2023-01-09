@@ -43,7 +43,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: true
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -399,7 +399,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'plain'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -512,7 +512,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -627,7 +627,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'unknown'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -666,7 +666,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -710,7 +710,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -766,7 +766,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -816,7 +816,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
@@ -867,7 +867,7 @@ describe('OAuth2Strategy', function() {
         state: true,
         pkce: 'S256'
       },
-      function(accessToken, refreshToken, profile, done) {
+      function({ accessToken, refreshToken, profile }, done) {
         if (accessToken == '2YotnFZFEjr1zCsicMWpAA' && refreshToken == 'tGzv3JOkF0XG5Qx2TlKWIA') { 
           return done(null, { id: '1234' }, { message: 'Hello' });
         }
